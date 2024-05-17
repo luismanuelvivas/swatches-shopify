@@ -81,11 +81,11 @@
             {% if variant_needed.metafields.custom.img and option.name == "Color" %}
               <label class="color-swatch" for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" data-option="{{ value }}" style="background-size: cover; background-image: url('{{ variant_needed.metafields.custom.img | file_url }}')">
                 &nbsp
-              </label>
+              </label><span>{{ variant_needed.title }}</span>
             {% elsif variant_needed.metafields.swatch.color and option.name == "Color" %}
               <label class="color-swatch" for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" data-option="{{ value }}" style="background-color: {{ variant_needed.metafields.swatch.color }}">
                 &nbsp
-              </label>
+              </label><span>{{ variant_needed.title }}</span>
             {%- elsif option.name == "Color"  -%}
               <label class="color-swatch" for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" data-option="{{ value }}" style="background-color: {{ value }}">
                 &nbsp
@@ -193,15 +193,4 @@
 </noscript>
 
 
-<script>
 
-  let swatches = document.getElementsByClassName('color-swatch')
-
-  for(let i; i < swatches.length; i++){
-    console.log(swatches[i].data-option)
-  }
-  
-
-
-
-</script>

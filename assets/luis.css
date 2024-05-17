@@ -31,5 +31,5 @@ label.color-swatch:hover {
 
 .product-form__input input[type=radio]:checked+label {
   border: 3px solid lightblue;
-  background: transparent;
+  background: transparent !important;
 }
