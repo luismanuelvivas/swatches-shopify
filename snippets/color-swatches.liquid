@@ -30,13 +30,32 @@
             const variantSelect = document.querySelector('select[name="id"]');
             if (variantSelect) {
               variantSelect.value = variantId;
-              variantSelect.dispatchEvent(new Event('change'));
+              // Dispatch change event for variant select
+              const event = new Event('change');
+              variantSelect.dispatchEvent(event);
             }
       
-            // Optionally update other elements, like price
-            // Add your own logic here
+            // Update other elements like price and add to cart button
+            updateProductDetails(variantId);
           });
         });
+      
+        // Function to update product details (price, SKU, etc.)
+        function updateProductDetails(variantId) {
+          // Fetch the variant details using the variant ID
+          const selectedVariant = window.product.variants.find(variant => variant.id == variantId);
+          
+          if (selectedVariant) {
+            // Update the product price
+            const priceElement = document.querySelector('.product-price');
+            if (priceElement) {
+              priceElement.textContent = Shopify.formatMoney(selectedVariant.price);
+            }
+      
+            // Update other elements if necessary
+            // Add your own logic here
+          }
+        }
       });
       
       
