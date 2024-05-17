@@ -31,7 +31,8 @@
           "type": "variant_swatches",
           "settings": {
             "picker_type": "swatches",
-            "fallback_img": "shopify:\/\/shop_images\/Main_589fc064-24a2-4236-9eaf-13b2bd35d21d.jpg"
+            "fallback_img": "shopify:\/\/shop_images\/Main_589fc064-24a2-4236-9eaf-13b2bd35d21d.jpg",
+            "title": "Choose your favorite color"
           }
         },
         "quantity_selector": {
