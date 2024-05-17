@@ -17,7 +17,3 @@ ul.grid.product-grid {
 .footer__blocks-wrapper {
     display: flex;
 }
-
-body{
-    background:red !important;
-}
