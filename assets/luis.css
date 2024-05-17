@@ -55,3 +55,7 @@ label.color-swatch {
 legend.legend-color.form__label {
   margin-bottom: 30px !important;
 }
+
+label.color-swatch:hover + span {
+  display: inline;
+}
