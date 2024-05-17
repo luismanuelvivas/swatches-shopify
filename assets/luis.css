@@ -44,6 +44,7 @@ span.swatch-title {
   font-size: 12px;
   text-align: center;
   margin-top: -15px;
+  display:none;
 }
 
 label.color-swatch {
