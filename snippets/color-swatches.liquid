@@ -1,0 +1,48 @@
+{% comment %}
+  This snippet generates color swatches for product variants using variant metafield images.
+{% endcomment %}
+
+<div class="color-swatches">
+    {% for variant in product.variants %}
+      {% assign swatch_image = variant.metafields.custom.img %}
+      <div class="swatch" data-variant-id="{{ variant.id }}">
+        {% if swatch_image %}
+          <img src="{{ swatch_image | img_url: '100x100' }}" alt="{{ variant.title }} Swatch">
+        {% else %}
+          <!-- Fallback swatch image if metafield is not set -->
+          <img src="{{ 'default-swatch.jpg' | asset_url }}" alt="Default Swatch">
+        {% endif %}
+        <p>{{ variant.title }}</p> <!-- Optional: display the variant title -->
+      </div>
+    {% endfor %}
+  </div>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const swatches = document.querySelectorAll('.swatch');
+      
+        swatches.forEach(function(swatch) {
+          swatch.addEventListener('click', function() {
+            const variantId = swatch.dataset.variantId;
+            const variantImage = swatch.querySelector('img').src;
+      
+            // Update main product image
+         //   const mainProductImage = document.querySelector('.product-main-image img');
+         //   if (mainProductImage) {
+         //     mainProductImage.src = variantImage;
+            }
+      //
+            // Optionally update the selected variant input
+            const variantSelect = document.querySelector('select[name="id"]');
+            if (variantSelect) {
+              variantSelect.value = variantId;
+              variantSelect.dispatchEvent(new Event('change'));
+            }
+      
+            // Optionally update other elements, like price
+            // Add your own logic here
+          });
+        });
+      });
+      
+  </script>

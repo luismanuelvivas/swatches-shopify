@@ -19,7 +19,27 @@ ul.grid.product-grid {
 }
 
 
-.swatch-container img{
-    width:100px;
-    height:100px;
-}
+
+.color-swatches {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .swatch {
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .swatch img {
+    border: 1px solid #ccc;
+    padding: 5px;
+    max-width: 100px;
+    height: auto;
+  }
+  
+  .swatch p {
+    margin-top: 5px;
+    font-size: 14px;
+  }
+  
