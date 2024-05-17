@@ -59,3 +59,12 @@ legend.legend-color.form__label {
 label.color-swatch:hover + span {
   display: inline;
 }
+
+span.form__label-color {
+  display: none;
+}
+
+.product-form__input input[type=radio]:checked+label.color-swatch+span {
+  display: inline;
+  margin-top: -18px;
+}

@@ -193,17 +193,3 @@
 </noscript>
 
 
-<script>
-
-  const selectedVariant = window.product.variants.find(variant =&gt; variant.id == variantId);
-    
-  if (selectedVariant) {
-    // Update the product price
-    const label = document.querySelector('.form__label-color');
-    if (label) {
-      label.textContent = Shopify.selectedVariant.title;
-    }
-
-
-
-</script>
