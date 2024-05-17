@@ -20,6 +20,9 @@
   assign variants_option2_arr = product.variants | map: 'option2'
   assign variants_option3_arr = product.variants | map: 'option3'
 
+  {% for variant in product.variants %}
+    assign variant_metafield_image = product.variant.metafields.custom.img 
+  {% endfor %}
 
   assign product_form_id = 'product-form-' | append: section.id
 -%}
@@ -27,8 +30,8 @@
 {%- for value in option.values -%}
   {%- liquid
     assign option_disabled = true
-    assign variant_metafield_image = product.variant.metafields.custom.img 
 
+    
     for option1_name in variants_option1_arr
       case option.position
         when 1
@@ -67,7 +70,7 @@
     </label> {% endcomment %}
     <label
       for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
-      style="background-image: url({{ product.variant.metafields.custom.img | img_url: 'large' }});background-size:cover; width:50px; height:50px;"
+      style="background-image: url({{ variant_metafield_image | img_url: 'large' }});background-size:cover; width:50px; height:50px;"
     ></label>
   {%- elsif block.settings.picker_type == 'dropdown' -%}
     <option
