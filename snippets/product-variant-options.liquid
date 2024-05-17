@@ -20,9 +20,8 @@
   assign variants_option2_arr = product.variants | map: 'option2'
   assign variants_option3_arr = product.variants | map: 'option3'
 
-  {% for variant in product.variants %}
-    assign variant_metafield_image = product.variant.metafields.custom.img 
-  {% endfor %}
+  assign variant_metafield_image = product.variants.metafields.custom.img 
+
 
   assign product_form_id = 'product-form-' | append: section.id
 -%}
