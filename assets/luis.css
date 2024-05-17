@@ -24,3 +24,7 @@ label.color-swatch {
   width: 80px;
   height: 80px;
 }
+
+label.color-swatch:hover {
+  opacity: 0.75;
+}
