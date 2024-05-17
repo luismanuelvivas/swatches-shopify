@@ -367,6 +367,19 @@
               name="options[{{ option.name | escape }}]"
               form="{{ product_form_id }}"
             >
+              <input
+                type="radio"
+                id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
+                name="{{ option.name }}"
+                value="{{ value | escape }}"
+                form="{{ product_form_id }}"
+                {% if option.selected_value == value %}
+                  checked
+                {% endif %}
+                {% if option_disabled %}
+                  class="disabled"
+                {% endif %}
+              >
               <label
                 for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
                 style="background-image: url({{ variant.metafields.custom.img | img_url: 'master' }});height:40px;width:40px;background-size: cover;"
