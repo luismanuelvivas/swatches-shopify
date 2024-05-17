@@ -28,3 +28,7 @@ label.color-swatch {
 label.color-swatch:hover {
   opacity: 0.75;
 }
+
+label.color-swatch.checked{
+  border:solid lightblue 3px;
+}
