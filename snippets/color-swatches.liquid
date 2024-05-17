@@ -12,13 +12,13 @@
       </div>
     {% endfor %}
   </div>
-  
-  <select form="{{ product_form_id }}" name="id" id="productSelect">
-    {% for variant in product.variants %}
+  {% for variant in product.variants %}
+  <select form="{{ product_form_id }}" name="id" id="productSelect" data-variant-id="{{ variant.id }}>
+
       <option value="{{ variant.id }}">{{ variant.title }}</option>
-    {% endfor %}
+
   </select>
-  
+{% endfor %}
   <script type="application/json">
     {{ product.variants | json }}
   </script>
@@ -34,10 +34,8 @@
       
             // Update the selected variant input
             const variantSelect = document.querySelector('select[name="id"]');
-            const select = document.querySelector('select')
             if (variantSelect) {
               variantSelect.value = variantId;
-              select.data-variant-id = "test";
               // Dispatch change event for variant select
               const event = new Event('change');
               variantSelect.dispatchEvent(event);
