@@ -311,14 +311,27 @@
               {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
           
               {%- when 'variant_swatches' -%}
-
-                  {% comment %} <label
+                <div class="swatch-container flex">
+                {% for variant in product.variants %}
+                  <input
+                    type="radio"
+                    id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
+                    name="{{ option.name }}"
+                    value="{{ value | escape }}"
+                    form="{{ product_form_id }}"
+                    {% if option.selected_value == value %}
+                      checked
+                    {% endif %}
+                    {% if option_disabled %}
+                      class="disabled"
+                    {% endif %}
+                  >
+                  <label
                     for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
                     style="background-image: url({{ variant.metafields.custom.img  | img_url:'master'}});"
-                  ></label> {% endcomment %}
-
-                  {% render 'product-variant-swatches', product: product, block: block, product_form_id: product_form_id %}
-
+                  ></label>
+                {% endfor %}
+              </div>
             {%- when 'buy_buttons' -%}
               test 1
               {%- render 'buy-buttons', block: block, product: product, product_form_id: product_form_id, section_id: section.id, show_pickup_availability: true -%}
@@ -731,25 +744,7 @@
     },
     {
       "type": "variant_swatches",
-      "name":"Variant Swatches",
-      "settings": [
-        {
-          "type": "select",
-          "id": "picker_type",
-          "options": [
-            {
-              "value": "dropdown",
-              "label": "t:sections.main-product.blocks.variant_picker.settings.picker_type.options__1.label"
-            },
-            {
-              "value": "button",
-              "label": "t:sections.main-product.blocks.variant_picker.settings.picker_type.options__2.label"
-            }
-          ],
-          "default": "button",
-          "label": "t:sections.main-product.blocks.variant_picker.settings.picker_type.label"
-        }
-      ]
+      "name":"Variant Swatches"
     },
     {
       "type": "buy_buttons",
