@@ -197,25 +197,9 @@
 
   let swatches = document.getElementsByClassName('color-swatch')
 
-
-  
-    
-    //Creating an item for each swatch
-	for(n=0 ; n < swatches.length ; n++){
-
-		let swatch = swatches[n];
-
-		//Using swatch item to call click event
-		swatch.addEventListener('click',function(){
-			//removing checked class from all items
-			for(i=0; i< swatches.length; i++){
-				swatches[i].classList.remove("checked");;
-			}
-			//adding checked class to clicked item
-			swatch.classList.add("checked");
-
-		})
-	}
+  for(let i; i < swatches.length; i++){
+    console.log(swatches[i].data-option)
+  }
   
 
 
