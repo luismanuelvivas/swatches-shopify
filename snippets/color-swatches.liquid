@@ -195,23 +195,15 @@
 
 <script>
 
-  let swatches = document.getElementsByClassName('color-swatch');
+  const selectedVariant = window.product.variants.find(variant =&gt; variant.id == variantId);
+    
+  if (selectedVariant) {
+    // Update the product price
+    const label = document.querySelector('.form__label-color');
+    if (label) {
+      label.textContent = Shopify.selectedVariant.title;
+    }
 
-  let swatch_title = document.getElementsByClassName('swatch-title');
-
-  for(let i = 0; i < swatches.length ; i++){
-    swatches[i].addEventListener('click', function(){
-      
-      current_title = swatch_title[i];
-
-      const label = document.getElementsByClassName('form__label-color');
-        for(n =0 ; n < label.length ; n++){
-          label.innerText = "lorem";
-        }
-      
-      
-    })
-  }
 
 
 </script>
