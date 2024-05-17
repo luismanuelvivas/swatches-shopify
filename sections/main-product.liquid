@@ -311,7 +311,7 @@
               {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
           
               {%- when 'variant_swatches' -%}
-                <legend class="legend-color form__label">{{block.settings.title }}</legend>
+                <span class="swatches-title">{{block.settings.title }}</span>
                 {% render 'color-swatches', product: product, block: block, product_form_id: product_form_id %}
 
                 
