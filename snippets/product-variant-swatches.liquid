@@ -73,7 +73,7 @@
     <label class="form__label" for="Variants-{{ section.id }}">
       {{- 'products.product.product_variants' | t -}}
     </label>
-    <img src="{{ variant.metafields.custom.img || img_url:'master'}}">
+ 
     <div class="select">
       <select
         name="id"
@@ -115,6 +115,8 @@
               endif
             -%}
           </option>
+
+          <img src="{{ variant.metafields.custom.img || img_url:'master'}}">
         {%- endfor -%}
       </select>
       {% render 'icon-caret' %}

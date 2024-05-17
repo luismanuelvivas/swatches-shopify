@@ -73,7 +73,6 @@
     <label class="form__label" for="Variants-{{ section.id }}">
       {{- 'products.product.product_variants' | t -}}
     </label>
-    <img src="{{ variant.metafields.custom.img || img_url:'master'}}">
     <div class="select">
       <select
         name="id"
@@ -114,6 +113,8 @@
                 echo 'products.product.quantity.in_cart_html' | t: quantity: cart_quantity | prepend: ' - '
               endif
             -%}
+
+            <img src="{{ variant.metafields.custom.img || img_url:'master'}}">
           </option>
         {%- endfor -%}
       </select>
