@@ -112,20 +112,20 @@
         "collection-0": {
           "type": "collection",
           "settings": {
-            "collection": ""
+            "collection": "hydrogen"
           }
         },
         "product": {
           "type": "product",
           "settings": {
-            "product": "",
+            "product": "the-complete-snowboard",
             "second_image": false
           }
         },
         "collection-1": {
           "type": "collection",
           "settings": {
-            "collection": ""
+            "collection": "automated-collection"
           }
         }
       },
