@@ -93,7 +93,7 @@
             {% else %}
               <label class="label-{{ option.name | downcase }}" for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
                 {{ value }}
-              </label>
+              </label><span>{{ variant_needed.title }}</span>
             {% endif %}
             
           {%- endfor -%}
