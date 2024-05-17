@@ -3478,28 +3478,3 @@ details-disclosure > details {
     --border-offset: 0px; /* Prevent the border from growing on buttons when this effect is on. */
   }
 }
-
-
-.product {
-  display: flex;
-}
-
-.image-with-text__grid.grid {
-  display: flex;
-}
-
-ul#Slider-template--22558108287273__multicolumn {
-  display: flex;
-}
-
-ul.grid.product-grid {
-  display: flex;
-}
-
-.footer__blocks-wrapper {
-  display: flex;
-}
-
-body{
-  background:red !important;
-}
