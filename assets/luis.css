@@ -30,7 +30,7 @@ label.color-swatch:hover {
 }
 
 .product-form__input input[type=radio]:checked+label.color-swatch {
-  border: 3px solid lightblue;
+  border: 4px solid lightblue !important;
   background:#fff;
 }
 
@@ -49,4 +49,8 @@ span.swatch-title {
 label.color-swatch {
   margin-bottom: 30px !important;
   border: 1px solid lightblue !important;
+}
+
+legend.legend-color.form__label {
+  margin-bottom: 30px;
 }
