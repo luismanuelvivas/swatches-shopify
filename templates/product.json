@@ -30,6 +30,7 @@
         "variant_swatches_hfmRP8": {
           "type": "variant_swatches",
           "settings": {
+            "picker_type": "swatches"
           }
         },
         "quantity_selector": {
