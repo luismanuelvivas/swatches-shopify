@@ -27,13 +27,6 @@
           "settings": {
           }
         },
-        "variant_picker": {
-          "type": "variant_picker",
-          "disabled": true,
-          "settings": {
-            "picker_type": "button"
-          }
-        },
         "variant_swatches_hfmRP8": {
           "type": "variant_swatches",
           "settings": {
@@ -104,7 +97,6 @@
         "title",
         "caption",
         "price",
-        "variant_picker",
         "variant_swatches_hfmRP8",
         "quantity_selector",
         "buy_buttons",
