@@ -311,6 +311,7 @@
               {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
               {%- for variant in product.variants -%}
               <img src="{{ variant.metafields.custom.img || img_url:'master'}}">
+              <p>this is a variant</p>
               {%- endfor -%}
             {%- when 'buy_buttons' -%}
               {%- render 'buy-buttons', block: block, product: product, product_form_id: product_form_id, section_id: section.id, show_pickup_availability: true -%}
