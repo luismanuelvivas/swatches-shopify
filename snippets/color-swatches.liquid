@@ -198,7 +198,10 @@
   let swatches = document.getElementsByClassName('color-swatch')
 
   for (let i = 0; i < swatches.length; i++) {
-    console.log(i);
+    swatches[i].addEventListener('click', function(){
+      swatches[].classList.remove("checked");
+      swatches[i].classList.add("checked");
+    })
     // more statements
   }
 
