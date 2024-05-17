@@ -309,7 +309,14 @@
 
             {%- when 'variant_picker' -%}
               {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
+          
+              {%- when 'variant_swatches' -%}
+                <span class="swatches-title">{{block.settings.title }}</span>
+                {% render 'color-swatches', product: product, block: block, product_form_id: product_form_id %}
+
+                
             {%- when 'buy_buttons' -%}
+              test 1
               {%- render 'buy-buttons', block: block, product: product, product_form_id: product_form_id, section_id: section.id, show_pickup_availability: true -%}
             {%- when 'rating' -%}
               {%- if product.metafields.reviews.rating.value != blank -%}
@@ -715,6 +722,39 @@
           ],
           "default": "button",
           "label": "t:sections.main-product.blocks.variant_picker.settings.picker_type.label"
+        }
+      ]
+    },
+    {
+      "type": "variant_swatches",
+      "name":"Variant Swatches",
+      "settings": [
+        {
+          "type": "select",
+          "id": "picker_type",
+          "options": [
+            {
+              "value": "swatches",
+              "label": "t:sections.main-product.blocks.variant_picker.settings.picker_type.options__1.label"
+            },
+            {
+              "value": "button",
+              "label": "t:sections.main-product.blocks.variant_picker.settings.picker_type.options__2.label"
+            }
+          ],
+          "default": "button",
+          "label": "t:sections.main-product.blocks.variant_picker.settings.picker_type.label"
+        },
+        {
+          "type":"image_picker",
+          "label":"Fallback img",
+          "id":"fallback_img"
+        },
+        {
+          "type":"text",
+          "label":"Title",
+          "id":"title",
+          "default":"Lorem Ipsum"
         }
       ]
     },
