@@ -312,14 +312,13 @@
           
               {%- when 'variant_swatches' -%}
                 <div class="swatch-container flex">
-                {% for variant in product.variants %}
                   {% comment %} <label
                     for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
                     style="background-image: url({{ variant.metafields.custom.img  | img_url:'master'}});"
                   ></label> {% endcomment %}
 
                   {% render 'product-variant-swatches', product: product, block: block, product_form_id: product_form_id %}
-                {% endfor %}
+
               </div>
             {%- when 'buy_buttons' -%}
               test 1
