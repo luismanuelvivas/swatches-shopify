@@ -73,7 +73,7 @@
     {% for variant in product.variants %}
       <label
         for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
-        style="background-image: url({{ variant.metafields.custom.img  | img_url: 'large' }});background-size:cover; width:50px; height:50px;"
+        style="background-image: url({{ variant.id.metafields.custom.img  | img_url: 'large' }});background-size:cover; width:50px; height:50px;"
       ></label>
     {% endfor %}
 
