@@ -311,9 +311,7 @@
               {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
           
               {%- when 'variant_swatches' -%}
-                <div class="swatch-container flex">
-                {% for variant in product.variants %}
-                  {% comment %}
+              {% comment %}
   Renders product variant-picker
 
   Accepts:
@@ -359,10 +357,9 @@
     >
       {%- for option in product.options_with_values -%}
         <div class="product-form__input product-form__input--dropdown">
-          <label
-            for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
-            style="background-image: url({{ variant.metafields.custom.img  | img_url:'master'}});background-size:cover; width:50px; height:50px;"
-          ></label>
+          <label class="form__label" for="Option-{{ section.id }}-{{ forloop.index0 }}">
+            {{ option.name }}
+          </label>
           <div class="select">
             <select
               id="Option-{{ section.id }}-{{ forloop.index0 }}"
@@ -370,7 +367,10 @@
               name="options[{{ option.name | escape }}]"
               form="{{ product_form_id }}"
             >
-              {% render 'product-variant-options', product: product, option: option, block: block %}
+              <label
+                for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
+                style="background-image: url({{ variant.metafields.custom.img | img_url: 'master' }});height:40px;width:40px;background-size: cover;"
+              ></label>
             </select>
             {% render 'icon-caret' %}
           </div>
@@ -438,16 +438,7 @@
   </div>
 </noscript>
 
-                  
-                {% endfor %}
-
-                <label
-                  for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
-                  style="background-image: url({{ variant.metafields.custom.img  | img_url:'master'}});background-size:cover; width:50px; height:50px;"
-                ></label>
-
-
-              </div>
+                
             {%- when 'buy_buttons' -%}
               test 1
               {%- render 'buy-buttons', block: block, product: product, product_form_id: product_form_id, section_id: section.id, show_pickup_availability: true -%}
