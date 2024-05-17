@@ -6,7 +6,7 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Image banner",
+            "heading": "Snow Board",
             "heading_size": "h0"
           }
         },
@@ -37,7 +37,7 @@
       "settings": {
         "image": "shopify:\/\/shop_images\/image_2024-05-17_134537751.png",
         "image_overlay_opacity": 40,
-        "image_height": "large",
+        "image_height": "medium",
         "desktop_content_position": "bottom-center",
         "show_text_box": false,
         "desktop_content_alignment": "center",
