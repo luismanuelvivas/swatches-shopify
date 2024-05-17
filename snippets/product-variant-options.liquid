@@ -19,6 +19,7 @@
   assign variants_option1_arr = product.variants | map: 'option1'
   assign variants_option2_arr = product.variants | map: 'option2'
   assign variants_option3_arr = product.variants | map: 'option3'
+  assign variant_metafield_image = product.selected_or_first_available_variant.metafields.namespace.key 
 
   assign product_form_id = 'product-form-' | append: section.id
 -%}
@@ -65,7 +66,7 @@
     </label> {% endcomment %}
     <label
       for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
-      style="background-image: url({{ product.variants.metafields.custom.img  | img_url:'master'}});background-size:cover; width:50px; height:50px;"
+      style="background-image: url({{ variant_metafield_image | img_url: 'large' }});background-size:cover; width:50px; height:50px;"
     ></label>
   {%- elsif block.settings.picker_type == 'dropdown' -%}
     <option
