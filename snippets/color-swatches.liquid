@@ -35,7 +35,7 @@
             // Update the selected variant input
             const variantSelect = document.querySelector('select[name="id"]');
             if (variantSelect) {
-              variantSelect.value = "test";
+              variantSelect.value = variantId;
               // Dispatch change event for variant select
               const event = new Event('change');
               variantSelect.dispatchEvent(event);
