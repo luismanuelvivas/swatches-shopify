@@ -37,7 +37,7 @@
             const select = document.querySelector('select')
             if (variantSelect) {
               variantSelect.value = variantId;
-              select.value = "test";
+              select.data-variant-id = "test";
               // Dispatch change event for variant select
               const event = new Event('change');
               variantSelect.dispatchEvent(event);
