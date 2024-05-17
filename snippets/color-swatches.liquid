@@ -12,13 +12,13 @@
       </div>
     {% endfor %}
   </div>
-  {% for variant in product.variants %}
-  <select form="{{ product_form_id }}" name="id" id="productSelect" data-variant-id="{{ variant.id }}>
-
+  
+  <select form="{{ product_form_id }}" name="id" id="productSelect">
+    {% for variant in product.variants %}
       <option value="{{ variant.id }}">{{ variant.title }}</option>
-
+    {% endfor %}
   </select>
-{% endfor %}
+  
   <script type="application/json">
     {{ product.variants | json }}
   </script>
