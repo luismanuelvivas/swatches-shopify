@@ -20,7 +20,7 @@
   assign variants_option2_arr = product.variants | map: 'option2'
   assign variants_option3_arr = product.variants | map: 'option3'
 
-  assign variant_metafield_image = product.variant.metafields.custom.img 
+  assign variant_metafield_image = product.selected_or_first_available_variant.metafields.custom.img 
 
 
   assign product_form_id = 'product-form-' | append: section.id
