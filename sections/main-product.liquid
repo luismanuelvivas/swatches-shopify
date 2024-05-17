@@ -311,7 +311,7 @@
               {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
           
               {%- when 'variant_swatches' -%}
-                <div class="class="grid grid-rows-1 gap-3"">
+                <div class="grid grid-rows-1 gap-3">
                 {% for variant in product.variants %}
                   <img  src="{{ variant.metafields.custom.img  | img_url:'master'}}">
                 {% endfor %}
