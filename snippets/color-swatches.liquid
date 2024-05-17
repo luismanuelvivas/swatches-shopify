@@ -12,7 +12,7 @@
     {% endfor %}
   </div>
   
-  <select name="id" id="productSelect">
+  <select form="{{ product_form_id }}" name="id" id="productSelect">
     {% for variant in product.variants %}
       <option value="{{ variant.id }}">{{ variant.title }}</option>
     {% endfor %}
