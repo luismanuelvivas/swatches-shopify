@@ -40,22 +40,7 @@
           });
         });
       
-        // Function to update product details (price, SKU, etc.)
-        function updateProductDetails(variantId) {
-          // Fetch the variant details using the variant ID
-          const selectedVariant = window.product.variants.find(variant => variant.id == variantId);
-          
-          if (selectedVariant) {
-            // Update the product price
-            const priceElement = document.querySelector('.product-price');
-            if (priceElement) {
-              priceElement.textContent = Shopify.formatMoney(selectedVariant.price);
-            }
-      
-            // Update other elements if necessary
-            // Add your own logic here
-          }
-        }
+ 
       });
       
       
