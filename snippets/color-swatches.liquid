@@ -2,7 +2,7 @@
 <div class="color-swatches">
     {% for variant in product.variants %}
       {% assign swatch_image = variant.metafields.custom.img %}
-      <div class="swatch" data-variantid="{{ variant.id }}">
+      <div class="swatch" data-variant-id="{{ variant.id }}">
         {% if swatch_image %}
           <img src="{{ swatch_image | img_url: '100x100' }}" alt="{{ variant.title }} Swatch">
         {% else %}
@@ -22,7 +22,8 @@
   <script type="application/json">
     {{ product.variants | json }}
   </script>
-  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
   <script>
     document.addEventListener('DOMContentLoaded', function() {
         const swatches = document.querySelectorAll('.swatch');
