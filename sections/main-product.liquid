@@ -313,23 +313,26 @@
               {%- when 'variant_swatches' -%}
                 <div class="swatch-container flex">
                 {% for variant in product.variants %}
-                  <input
-                    type="radio"
-                    id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
-                    name="{{ option.name }}"
-                    value="{{ value | escape }}"
-                    form="{{ product_form_id }}"
-                    {% if option.selected_value == value %}
-                      checked
-                    {% endif %}
-                    {% if option_disabled %}
-                      class="disabled"
-                    {% endif %}
-                  >
-                  <label
-                    for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
-                    style="background-image: url({{ variant.metafields.custom.img  | img_url:'master'}});background-size:cover; width:50px; height:50px;"
-                  ></label>
+                  {% for value in option.values %}
+                    <input
+                      type="radio"
+                      id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
+                      name="{{ option.name }}"
+                      value="{{ value | escape }}"
+                      form="{{ product_form_id }}"
+                      {% if option.selected_value == value %}
+                        checked
+                      {% endif %}
+                      {% if option_disabled %}
+                        class="disabled"
+                      {% endif %}
+                    >
+                    <label
+                      for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
+                      style="background-image: url({{ variant.metafields.custom.img  | img_url:'master'}});background-size:cover; width:50px; height:50px;"
+                    ></label>
+                  {% endfor %}
+                  
                 {% endfor %}
               </div>
             {%- when 'buy_buttons' -%}
