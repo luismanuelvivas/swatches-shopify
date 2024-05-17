@@ -313,7 +313,10 @@
               {%- when 'variant_swatches' -%}
                 <div class="swatch-container flex">
                 {% for variant in product.variants %}
-                  <img  src="{{ variant.metafields.custom.img  | img_url:'master'}}">
+                  <label
+                    for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
+                    style="background-image: url({{ variant.metafields.custom.img  | img_url:'master'}});"
+                  ></label>
                 {% endfor %}
               </div>
             {%- when 'buy_buttons' -%}
