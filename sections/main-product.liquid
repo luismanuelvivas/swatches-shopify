@@ -313,7 +313,7 @@
               {%- when 'variant_swatches' -%}
                 <div class="swatch-container flex">
                 {% for variant in product.variants %}
-                  {% for value in option.values %}
+                  {% for option in product.options_with_values %}
                     <input
                       type="radio"
                       id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
