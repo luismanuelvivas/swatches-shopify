@@ -65,7 +65,7 @@
     </label> {% endcomment %}
     <label
       for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
-      style="background-image: url({{ variant.metafields.custom.img  | img_url:'master'}});background-size:cover; width:50px; height:50px;"
+      style="background-image: url({{ product.variant.metafields.custom.img  | img_url:'master'}});background-size:cover; width:50px; height:50px;"
     ></label>
   {%- elsif block.settings.picker_type == 'dropdown' -%}
     <option
