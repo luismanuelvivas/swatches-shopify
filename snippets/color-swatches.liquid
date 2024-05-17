@@ -83,15 +83,15 @@
                 &nbsp
               </label><span class="swatch-title">{{ variant_needed.title }}</span>
             {% elsif variant_needed.metafields.swatch.color and option.name == "Color" %}
-            <label class="color-swatch" for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" data-option="{{ value }}" style="background-size: cover; background-image: url('{{ block.settings.fallback_img | file_url }}')">
+            <label class="color-swatch" for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" data-option="{{ value }}" style="background-size: cover; background-image: url('{{ block.settings.fallback_img | img_url:'100x' }}')">
               &nbsp
             </label><span class="swatch-title">{{ variant_needed.title }}</span>
             {%- elsif option.name == "Color"  -%}
-            <label class="color-swatch" for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" data-option="{{ value }}" style="background-size: cover; background-image: url('{{ block.settings.fallback_img | file_url }}')">
+            <label class="color-swatch" for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" data-option="{{ value }}" style="background-size: cover; background-image: url('{{ block.settings.fallback_img | img_url:'100x'  }}')">
               &nbsp
             </label><span class="swatch-title">{{ variant_needed.title }}</span>
             {% else %}
-            <label class="color-swatch" for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" data-option="{{ value }}" style="background-size: cover; background-image: url('{{ block.settings.fallback_img | file_url }}')">
+            <label class="color-swatch" for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" data-option="{{ value }}" style="background-size: cover; background-image: url('{{ block.settings.fallback_img | img_url:'100x'  }}')">
               &nbsp
             </label><span class="swatch-title">{{ variant_needed.title }}</span>
             {% endif %}
