@@ -29,8 +29,9 @@ label.color-swatch:hover {
   opacity: 0.75;
 }
 
-.product-form__input input[type=radio]:checked+label {
+.product-form__input input[type=radio]:checked+label.color-swatch {
   border: 3px solid lightblue;
+  background:#fff;
 }
 
 span.swatch-title {
