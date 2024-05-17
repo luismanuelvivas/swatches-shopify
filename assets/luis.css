@@ -36,15 +36,16 @@ label.color-swatch:hover {
 
 span.swatch-title {
   position: absolute;
-  margin-left: -71px;
-  background: lightblue;
-  color: #fff;
-  border-radius: 20px;
-  padding: 2px 10px;
-  font-size: 12px;
-  text-align: center;
-  margin-top: -15px;
-  display:none;
+    margin-left: -72px;
+    background: #add8e6;
+    color: #fff;
+    border-radius: 20px;
+    padding: 2px 10px;
+    font-size: 12px;
+    text-align: center;
+    margin-top: -18px;
+    display: none;
+    min-width: 45px;
 }
 
 label.color-swatch {
