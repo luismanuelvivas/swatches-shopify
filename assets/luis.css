@@ -18,6 +18,10 @@ ul.grid.product-grid {
     display: flex;
 }
 
+ul#Slider-template--22558112874793__multicolumn {
+  display: flex;
+}
+
 
 /*Color Swatches*/
 label.color-swatch {
@@ -68,4 +72,8 @@ span.form__label-color {
 .product-form__input input[type=radio]:checked+label.color-swatch+span {
   display: inline;
   margin-top: -18px;
+}
+
+legend.legend-color.form__label {
+  display: none;
 }
