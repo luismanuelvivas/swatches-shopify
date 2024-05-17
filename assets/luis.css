@@ -52,5 +52,5 @@ label.color-swatch {
 }
 
 legend.legend-color.form__label {
-  margin-bottom: 30px;
+  margin-bottom: 30px !important;
 }
