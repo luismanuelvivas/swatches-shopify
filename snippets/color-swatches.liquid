@@ -1,21 +1,23 @@
-{% comment %}
-  This snippet generates color swatches for product variants using variant metafield images.
-{% endcomment %}
-
 <div class="color-swatches">
     {% for variant in product.variants %}
-      {% assign swatch_image = variant.metafields.custom.img %}
+      {% assign swatch_image = variant.metafields.namespace.key %}
       <div class="swatch" data-variant-id="{{ variant.id }}">
         {% if swatch_image %}
           <img src="{{ swatch_image | img_url: '100x100' }}" alt="{{ variant.title }} Swatch">
         {% else %}
-          <!-- Fallback swatch image if metafield is not set -->
           <img src="{{ 'default-swatch.jpg' | asset_url }}" alt="Default Swatch">
         {% endif %}
-        <p>{{ variant.title }}</p> <!-- Optional: display the variant title -->
+        <p>{{ variant.title }}</p>
       </div>
     {% endfor %}
   </div>
+  
+  <select name="id" id="productSelect">
+    {% for variant in product.variants %}
+      <option value="{{ variant.id }}">{{ variant.title }}</option>
+    {% endfor %}
+  </select>
+  
   
   <script>
     document.addEventListener('DOMContentLoaded', function() {
@@ -24,9 +26,8 @@
         swatches.forEach(function(swatch) {
           swatch.addEventListener('click', function() {
             const variantId = swatch.dataset.variantId;
-            const variantImage = swatch.querySelector('img').src;
       
-            // Optionally update the selected variant input
+            // Update the selected variant input
             const variantSelect = document.querySelector('select[name="id"]');
             if (variantSelect) {
               variantSelect.value = variantId;
@@ -34,12 +35,10 @@
               const event = new Event('change');
               variantSelect.dispatchEvent(event);
             }
-      
           });
         });
-      
- 
       });
+      
       
       
   </script>
