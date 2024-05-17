@@ -7,17 +7,17 @@
       "login_form_password_placeholder": "Vaše geslo",
       "login_form_error": "Geslo ni pravilno!",
       "login_form_submit": "Vstop",
-      "admin_link_html": "Ali ste lastnik te trgovine? <a href=\"\/admin\" class=\"link underlined-link\">Prijavite se tukaj<\/a>",
+      "admin_link_html": "Ali ste lastnik te trgovine? <a href=\"/admin\" class=\"link underlined-link\">Prijavite se tukaj</a>",
       "powered_by_shopify_html": "To trgovino bo omogočala platforma {{ shopify }}"
     },
     "social": {
       "alt_text": {
         "share_on_facebook": "Delite v Facebooku",
-        "share_on_twitter": "Delite na omrežju X",
+        "share_on_twitter": "Tvitnite v Twitterju",
         "share_on_pinterest": "Pripnite v Pinterestu"
       },
       "links": {
-        "twitter": "X (Twitter)",
+        "twitter": "Twitter",
         "facebook": "Facebook",
         "pinterest": "Pinterest",
         "instagram": "Instagram",
@@ -127,10 +127,7 @@
         "minimum_of": "Najmanj od {{ quantity }}",
         "maximum_of": "Največ od {{ quantity }}",
         "multiples_of": "V korakih po {{ quantity }}",
-        "in_cart_html": "<span class=\"quantity-cart\">{{ quantity }}<\/span> v košarici",
-        "note": "Prikaži pravila glede količine",
-        "min_of": "Najmanj {{ quantity }}",
-        "max_of": "Največ {{ quantity }}"
+        "in_cart_html": "<span class=\"quantity-cart\">{{ quantity }}</span> v košarici"
       },
       "price": {
         "from_price_html": "Od {{ price }}",
@@ -142,8 +139,8 @@
         "view_store_info": "Prikaži podatke o trgovini",
         "check_other_stores": "Preveri razpoložljivost v drugih trgovinah",
         "pick_up_available": "Na voljo je osebni prevzem",
-        "pick_up_available_at_html": "Prevzem je mogoč na prevzemnem mestu <span class=\"color-foreground\">{{ location_name }}<\/span>",
-        "pick_up_unavailable_at_html": "Na prevzemnem mestu <span class=\"color-foreground\">{{ location_name }}<\/span> osebni prevzem trenutno ni mogoč",
+        "pick_up_available_at_html": "Prevzem je mogoč na prevzemnem mestu <span class=\"color-foreground\">{{ location_name }}</span>",
+        "pick_up_unavailable_at_html": "Na prevzemnem mestu <span class=\"color-foreground\">{{ location_name }}</span> osebni prevzem trenutno ni mogoč",
         "unavailable": "Podatka o razpoložljivosti osebnega prevzema ni mogoče naložiti",
         "refresh": "Osveži"
       },
@@ -159,7 +156,7 @@
       },
       "view_full_details": "Prikaži vse podrobnosti",
       "include_taxes": "Vključno z davkom.",
-      "shipping_policy_html": "<a href=\"{{ link }}\">Dostava<\/a> se obračuna ob zaključku nakupa.",
+      "shipping_policy_html": "<a href=\"{{ link }}\">Dostava</a> se obračuna ob zaključku nakupa.",
       "choose_options": "Izberite možnosti",
       "choose_product_options": "Izberite možnosti za izdelek {{ product_name }}",
       "value_unavailable": "{{ option_value }} – ni na voljo",
@@ -170,14 +167,7 @@
       "inventory_low_stock_show_count": "Majhna zaloga, preostalo še: {{ quantity }}",
       "inventory_out_of_stock": "Ni na zalogi",
       "inventory_out_of_stock_continue_selling": "Na zalogi",
-      "sku": "Inventarna številka",
-      "volume_pricing": {
-        "title": "Količinski popust",
-        "note": "Na voljo je količinski popust",
-        "minimum": "{{ quantity }} in več",
-        "price_at_each": "po ceni {{ price }}\/kos",
-        "price_range": "{{ minimum }}–{{ maximum }}"
-      }
+      "sku": "Inventarna številka"
     },
     "modal": {
       "label": "Galerija predstavnostnih vsebin"
@@ -216,8 +206,7 @@
       "clear_filter": "Odstrani filter",
       "filter_selected_accessibility": "{{ type }} (št. izbranih filtrov: {{ count }})",
       "show_more": "Prikaži več",
-      "show_less": "Prikaži manj",
-      "filter_and_operator_subtitle": "Ustreza vsem"
+      "show_less": "Prikaži manj"
     }
   },
   "templates": {
@@ -295,15 +284,17 @@
       "title": "Vaša košarica",
       "caption": "Izdelki v košarici",
       "remove_title": "Odstrani izdelek {{ title }}",
+      "subtotal": "Vmesna vsota",
+      "new_subtotal": "Nova vmesna vsota",
       "note": "Posebna navodila za naročilo",
       "checkout": "Zaključi nakup",
       "empty": "Vaša košarica je prazna",
       "cart_error": "Pri posodabljanju vaše košarice je prišlo do napake. Poskusite znova.",
       "cart_quantity_error_html": "V košarico lahko dodate največ toliko tovrstnih izdelkov: {{ quantity }}.",
-      "taxes_and_shipping_policy_at_checkout_html": "Davki, popusti in <a href=\"{{ link }}\">strošek dostave<\/a> se obračunajo ob zaključku nakupa",
-      "taxes_included_but_shipping_at_checkout": "Vključeni davek ter strošek dostave in popusti se obračunajo ob zaključku nakupa",
-      "taxes_included_and_shipping_policy_html": "Davek vključen. <a href=\"{{ link }}\">Strošek dostave<\/a> in popusti se obračunajo ob zaključku nakupa.",
-      "taxes_and_shipping_at_checkout": "Davki, popusti in strošek dostave se obračunajo ob zaključku nakupa",
+      "taxes_and_shipping_policy_at_checkout_html": "Davki in <a href=\"{{ link }}\">dostava</a> se obračunajo ob zaključku nakupa",
+      "taxes_included_but_shipping_at_checkout": "Vključen davek in dostava se obračunata ob zaključku nakupa",
+      "taxes_included_and_shipping_policy_html": "Vključno z davkom. <a href=\"{{ link }}\">Dostava</a> se obračuna ob zaključku nakupa.",
+      "taxes_and_shipping_at_checkout": "Davki in dostava se obračunajo ob zaključku nakupa",
       "update": "Posodobitev",
       "headings": {
         "product": "Izdelek",
@@ -314,10 +305,8 @@
       },
       "login": {
         "title": "Ali imate račun?",
-        "paragraph_html": "Za hitrejši zaključek nakupa <a href=\"{{ link }}\" class=\"link underlined-link\">se prijavite<\/a>."
-      },
-      "estimated_total": "Predvideni skupni znesek",
-      "new_estimated_total": "Nov predvideni skupni znesek"
+        "paragraph_html": "Za hitrejši zaključek nakupa <a href=\"{{ link }}\" class=\"link underlined-link\">se prijavite</a>."
+      }
     },
     "footer": {
       "payment": "Načini plačila"
@@ -337,7 +326,7 @@
     "collection_template": {
       "title": "Zbirka",
       "empty": "Ni najdenih izdelkov",
-      "use_fewer_filters_html": "Uporabite manj filtrov ali <a class=\"{{ class }}\" href=\"{{ link }}\">odstranite vse<\/a>"
+      "use_fewer_filters_html": "Uporabite manj filtrov ali <a class=\"{{ class }}\" href=\"{{ link }}\">odstranite vse</a>"
     },
     "video": {
       "load_video": "Naloži videoposnetek: {{ description }}"
@@ -360,45 +349,13 @@
       "carousel": "Vrtiljak",
       "announcement": "Obvestilo",
       "announcement_bar": "Vrstica za obvestila"
-    },
-    "quick_order_list": {
-      "product_total": "Vmesna vsota",
-      "view_cart": "Prikaži košarico",
-      "each": "{{ money }}\/kos",
-      "product": "Izdelek",
-      "variant": "Različica",
-      "variant_total": "Skupaj različice",
-      "items_added": {
-        "one": "Dodan je {{ quantity }} artikel",
-        "other": "Dodani so artikli: {{ quantity }}",
-        "few": "Dodani so artikli: {{ quantity }}",
-        "two": "Dodani so artikli: {{ quantity }}"
-      },
-      "items_removed": {
-        "one": "Odstranjen je {{ quantity }} artikel",
-        "other": "Odstranjeni so artikli: {{ quantity }}",
-        "few": "Odstranjeni so artikli: {{ quantity }}",
-        "two": "Odstranjeni so artikli: {{ quantity }}"
-      },
-      "product_variants": "Različice izdelka",
-      "total_items": "Skupno število izdelkov",
-      "remove_all_items_confirmation": "Ali želite iz košarice odstraniti vse izdelke ({{ quantity }})?",
-      "remove_all": "Odstrani vse",
-      "cancel": "Prekliči",
-      "remove_all_single_item_confirmation": "Ali želite iz košarice odstraniti 1 izdelek?",
-      "min_error": "Ta artikel ima najmanj {{ min }}",
-      "max_error": "Ta artikel ima največ {{ max }}",
-      "step_error": "Ta artikel lahko dodate samo v korakih po {{ step }}."
     }
   },
   "localization": {
-    "country_label": "Država\/regija",
+    "country_label": "Država/regija",
     "language_label": "Jezik",
     "update_language": "Posodobi jezik",
-    "update_country": "Posodobi državo\/regijo",
-    "search": "Išči",
-    "popular_countries_regions": "Priljubljene države\/regije",
-    "country_results_count": "Najdene države\/regije: {{ count }}"
+    "update_country": "Posodobi državo/regijo"
   },
   "customer": {
     "account": {
@@ -429,7 +386,7 @@
       "address1": "Naslov 1",
       "address2": "Naslov 2",
       "city": "Kraj",
-      "country": "Država\/regija",
+      "country": "Država/regija",
       "province": "Provinca",
       "zip": "Poštna številka",
       "phone": "Telefonska številka",
@@ -451,8 +408,7 @@
       "password": "Geslo",
       "title": "Prijava",
       "sign_in": "Vpis",
-      "submit": "Pošlji",
-      "alternate_provider_separator": "ali"
+      "submit": "Pošlji"
     },
     "order": {
       "title": "Naročilo {{ name }}",

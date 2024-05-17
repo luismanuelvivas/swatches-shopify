@@ -6,6 +6,7 @@ if (!customElements.get('product-info')) {
         super();
         this.input = this.querySelector('.quantity__input');
         this.currentVariant = this.querySelector('.product-variant-id');
+        this.variantSelects = this.querySelector('variant-radios');
         this.submitButton = this.querySelector('[type="submit"]');
       }
 
@@ -49,20 +50,16 @@ if (!customElements.get('product-info')) {
         const max = data.max === null ? data.max : data.max - data.cartQuantity;
         if (max !== null) min = Math.min(min, max);
         if (data.cartQuantity >= data.min) min = Math.min(min, data.step);
-        this.input.min = min;
 
-        if (max) {
-          this.input.max = max;
-        } else {
-          this.input.removeAttribute('max');
-        }
+        this.input.min = min;
+        this.input.max = max;
         this.input.value = min;
         publish(PUB_SUB_EVENTS.quantityUpdate, undefined);
       }
 
       fetchQuantityRules() {
         if (!this.currentVariant || !this.currentVariant.value) return;
-        this.querySelector('.quantity__rules-cart .loading__spinner').classList.remove('hidden');
+        this.querySelector('.quantity__rules-cart .loading-overlay').classList.remove('hidden');
         fetch(`${this.dataset.url}?variant=${this.currentVariant.value}&section_id=${this.dataset.section}`)
           .then((response) => {
             return response.text();
@@ -76,7 +73,7 @@ if (!customElements.get('product-info')) {
             console.error(e);
           })
           .finally(() => {
-            this.querySelector('.quantity__rules-cart .loading__spinner').classList.add('hidden');
+            this.querySelector('.quantity__rules-cart .loading-overlay').classList.add('hidden');
           });
       }
 
@@ -91,11 +88,7 @@ if (!customElements.get('product-info')) {
             const attributes = ['data-cart-quantity', 'data-min', 'data-max', 'step'];
             for (let attribute of attributes) {
               const valueUpdated = updated.getAttribute(attribute);
-              if (valueUpdated !== null) {
-                current.setAttribute(attribute, valueUpdated);
-              } else {
-                current.removeAttribute(attribute);
-              }
+              if (valueUpdated !== null) current.setAttribute(attribute, valueUpdated);
             }
           } else {
             current.innerHTML = updated.innerHTML;
