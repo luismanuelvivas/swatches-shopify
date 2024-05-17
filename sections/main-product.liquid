@@ -311,7 +311,7 @@
               {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
           
               {%- when 'variant_swatches' -%}
-            
+                <legend class="legend-color form__label">{{block.settings.title }}</legend>
                 {% render 'color-swatches', product: product, block: block, product_form_id: product_form_id %}
 
                 
@@ -749,6 +749,11 @@
           "type":"image_picker",
           "label":"Fallback img",
           "id":"fallback_img"
+        },
+        {
+          "type":"text",
+          "label":"Tilte",
+          "id":"Lorem Ipsum"
         }
       ]
     },
