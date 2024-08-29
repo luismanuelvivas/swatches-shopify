@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "current": {
     "logo": "shopify:\/\/shop_images\/logo.png",
@@ -129,6 +138,14 @@
     "content_for_index": [
 
     ],
+    "blocks": {
+      "11105581477831763250": {
+        "type": "shopify:\/\/apps\/free-gift-box-bogo-buy-x-get-y\/blocks\/app-embeded\/624007ce-b7ae-460f-9bb2-c6b59ecf9add",
+        "disabled": false,
+        "settings": {
+        }
+      }
+    },
     "color_schemes": {
       "background-1": {
         "settings": {
