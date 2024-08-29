@@ -151,6 +151,12 @@
         "settings": {
           "version": "v3"
         }
+      },
+      "14041968213898805026": {
+        "type": "shopify:\/\/apps\/aov-free-gift-bxgy\/blocks\/app-embed-free-gift\/de98edfe-90fa-4145-8a57-1055e0058723",
+        "disabled": false,
+        "settings": {
+        }
       }
     },
     "color_schemes": {
