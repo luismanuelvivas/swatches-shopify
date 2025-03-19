@@ -317,7 +317,7 @@
                 
             {%- when 'buy_buttons' -%}
 
-           
+            {% if customer %}
               {% assign purchased = false %}
               
               {% for order in customer.orders %}
@@ -333,6 +333,7 @@
                   ¡Ya compraste este producto! 😊 ¡Gracias por tu compra!
                 </div>
               {% endif %}
+            {% endif %}
 
                           
               test 1
