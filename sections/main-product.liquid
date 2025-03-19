@@ -316,6 +316,26 @@
 
                 
             {%- when 'buy_buttons' -%}
+
+            {% if customer %}
+              {% assign purchased = false %}
+              
+              {% for order in customer.orders %}
+                {% for line_item in order.line_items %}
+                  {% if line_item.product.id == product.id %}
+                    {% assign purchased = true %}
+                  {% endif %}
+                {% endfor %}
+              {% endfor %}
+              
+              {% if purchased %}
+                <div class="purchased-message" style="background: #f8d7da; color: #721c24; padding: 10px; border-radius: 5px;">
+                  ¡Ya compraste este producto! 😊 ¡Gracias por tu compra!
+                </div>
+              {% endif %}
+            {% endif %}
+
+                          
               test 1
               {%- render 'buy-buttons', block: block, product: product, product_form_id: product_form_id, section_id: section.id, show_pickup_availability: true -%}
             {%- when 'rating' -%}
